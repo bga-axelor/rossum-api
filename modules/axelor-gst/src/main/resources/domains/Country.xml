@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.0.xsd">
+
+ <module package="com.axelor.gst.db" name="gst" />
+
+ <entity name="Country" sequential="true" cachable="true" repository="abstract">
+  <!-- <one-to-one name="company" ref="com.axelor.contact.db.Company" /> -->
+  
+  <many-to-one name="address" ref="com.axelor.contact.db.Address"></many-to-one>
+
+
+  <one-to-many name="contactList" ref="com.axelor.gst.db.Contact" mappedBy="party" />
+
+  <string name="name" />
+
+ </entity>
+
+</domain-models>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+ <grid model="com.axelor.gst.db.Contact" title="Contact" name="party-grid">
+  <field name="name" title="Name" />
+  <field name="type" />
+  <field name="primary_email" />
+  <field name="secondary_email" />
+  <field name="primary_phone" />
+  <field name="secondary_phone" />
+ </grid>
+
+
+ <form name="party-form" title="Contact" model="com.axelor.gst.db.Contact" css="panel-blue">
+  <panel>
+   <field name="name" />
+   <field name="type" selection="contact.type.selection" />
+   <field name="primary_email" />
+   <field name="secondary_email" />
+   <field name="primary_phone" />
+   <field name="secondary_phone" />
+  </panel>
+
+
+
+
+ </form>
+ <selection name="contact.type.selection">
+  <option value="Primary">Primary</option>
+  <option value="Secondary">Secondary</option>
+  <option value="Other">Other</option>
+ </selection>
+
+</object-views>

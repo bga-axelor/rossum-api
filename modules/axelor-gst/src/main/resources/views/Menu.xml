@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+ <!-- Dashboard -->
+
+ <menuitem name="menu-dashbord" title="Dashboard" />
+
+<!--  <menuitem name="menu-dashbord-all" parent="menu-dashbord" title="Dashboard" -->
+<!--   action="dashboard.all" /> -->
+
+<!--  <action-view name="dashboard.all" title="Dashboard"> -->
+  <!-- <view type="grid" name="party-grid" /> -->
+  <!-- <view type="form" name="party-form" /> -->
+<!--  </action-view> -->
+
+ <!-- Party -->
+
+ <menuitem name="menu-party" title="Party" />
+
+ <!-- All Party -->
+
+ <menuitem title="Party" name="menu-party-all" parent="menu-party" action="party.all" />
+
+ <action-view name="party.all" title="Party" model="com.axelor.gst.db.Party">
+  <view type="grid" name="party-grid" />
+  <view type="form" name="party-form" />
+ </action-view>
+
+ <!-- party Contact -->
+ <menuitem title="Contact" name="menu-party-contact" parent="menu-party"
+  action="contact.all" />
+
+ <action-view name="contact.all" title="Party" model="com.axelor.gst.db.Contact">
+  <view type="grid" name="contact-grid" />
+  <view type="form" name="contact-form" />
+ </action-view>
+
+ <!-- party Configurations -->
+ <!-- <menuitem title="Configurations" name="menu-party-configurations" -->
+ <!-- parent="menu-party" /> -->
+
+
+ <!-- <menuitem title="Address" name="menu-party-configurations-address" -->
+ <!-- parent="menu-party-configurations" action="address.all"/> -->
+
+
+ <!-- <action-view name="address.all" title="Address" -->
+ <!-- model="com.axelor.contact.db.Aontact"> -->
+ <!-- <view type="grid" name="address-grid" /> -->
+ <!-- <view type="form" name="address-form" /> -->
+ <!-- </action-view> -->
+
+ <!-- Department -->
+
+ <!-- <menuitem title="Department" name="menu-company-department" -->
+ <!-- parent="menu-company" /> -->
+
+ <!-- <menuitem title="All Department" -->
+ <!-- name="menu-company-department.all" parent="menu-company-department" -->
+ <!-- action="department.all" /> -->
+
+ <!-- <action-view name="department.all" title="Department" -->
+ <!-- model="com.axelor.contact.db.Department"> -->
+ <!-- <view type="grid" name="department-grid" /> -->
+ <!-- <view type="kanban" name="department-kanban" /> comment -->
+ <!-- <view type="form" name="department-form" /> -->
+
+ <!-- </action-view> -->
+
+ <!-- <menuitem title="Technical Department" -->
+ <!-- name="menu-company-department.technical" -->
+ <!-- parent="menu-company-department" action="department.all.technical" /> -->
+
+
+ <!-- <action-view name="department.all.technical" -->
+ <!-- title="Technical Department" model="com.axelor.contact.db.Department"> -->
+ <!-- <view type="grid" name="department-grid" /> -->
+ <!-- <view type="form" name="department-form" /> -->
+ <!-- <view-param name="popup" value="reload" /> -->
+ <!-- <domain> self.isTechnical=true</domain> -->
+ <!-- </action-view> -->
+
+ <!-- <menuitem title="All Partner" name="menu-company-partner" -->
+ <!-- parent="menu-company" action="partner.all" /> -->
+
+ <!-- <action-view name="partner.all" title="Partner" -->
+ <!-- model="com.axelor.contact.db.Partner"> -->
+ <!-- <view type="grid" name="partner-grid" /> -->
+ <!-- <view type="form" name="partner-form" /> -->
+ <!-- <view type="cards" name="partner-cards" /> -->
+ <!-- <context name="json-enhance" expr="false" /> -->
+ <!-- </action-view> -->
+
+</object-views>
